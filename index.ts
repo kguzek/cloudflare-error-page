@@ -190,8 +190,6 @@ export default {
 				headers: { "Content-Type": "text/html" },
 			});
 
-		return customErrorPage(503);
-
 		try {
 			const response = await fetch(request);
 			if ([502, 503, 504].includes(response.status)) {
