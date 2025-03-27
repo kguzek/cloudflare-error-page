@@ -4,7 +4,7 @@
  */
 {
 	"$schema": "node_modules/wrangler/config-schema.json",
-	"name": "cloudflare-test",
+	"name": "cloudflare-error-page",
 	"main": "index.ts",
 	"compatibility_date": "2025-03-21",
 	"compatibility_flags": ["nodejs_compat"],
