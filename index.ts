@@ -192,7 +192,7 @@ export default {
 
 		try {
 			const response = await fetch(request);
-			if ([502, 503, 504].includes(response.status)) {
+			if ([502, 503, 504, 530].includes(response.status)) {
 				return customErrorPage(response.status);
 			}
 			return response;
