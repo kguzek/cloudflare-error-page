@@ -58,7 +58,7 @@ const getErrorPageHtml = (locale: Locale) =>
 				background: linear-gradient(135deg, rgba(255, 69, 58, 0.6), #2596be);
 				border-radius: 50%;
 				filter: blur(120px);
-				animation: blobAnimation 10s alternate ease-in-out;
+				animation: blobAnimation 10s alternate ease-in-out 2;
 				pointer-events: none;
 			}
 			@keyframes blobAnimation {
