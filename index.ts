@@ -18,6 +18,9 @@ const TRANSLATIONS = {
 	},
 };
 
+//https://developers.cloudflare.com/support/troubleshooting/cloudflare-errors/troubleshooting-cloudflare-5xx-errors/
+const CLOUDFLARE_ERROR_CODES = [502, 503, 504, 520, 521, 522, 523, 524, 525, 526, 530];
+
 type Locale = keyof typeof TRANSLATIONS;
 
 const getErrorPageHtml = (locale: Locale) =>
@@ -192,7 +195,7 @@ export default {
 
 		try {
 			const response = await fetch(request);
-			if ([502, 503, 504, 530].includes(response.status)) {
+			if (CLOUDFLARE_ERROR_CODES.includes(response.status)) {
 				return customErrorPage(response.status);
 			}
 			return response;
