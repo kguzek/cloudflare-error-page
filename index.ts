@@ -187,6 +187,7 @@ function getRequestLocale(request: Request): Locale {
 export default {
 	async fetch(request) {
 		const locale = getRequestLocale(request);
+		const requestUrl = new URL(request.url);
 
 		const customErrorPage = (code: number) =>
 			new Response(getErrorPageHtml(locale), {
@@ -197,6 +198,10 @@ export default {
 		try {
 			const response = await fetch(request);
 			if (CLOUDFLARE_ERROR_CODES.includes(response.status)) {
+				if (requestUrl.searchParams.get("bypass_error_proxy") === "true") {
+					console.warn("Bypassing custom error page proxy for response with error code", response.status);
+					return response;
+				}
 				return customErrorPage(response.status);
 			}
 			return response;
