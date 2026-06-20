@@ -6,10 +6,12 @@
 		"deploy": "wrangler deploy",
 		"dev": "wrangler dev",
 		"start": "wrangler dev",
-		"cf-typegen": "wrangler types"
+		"cf-typegen": "wrangler types",
+		"types:check": "tsc --noEmit"
 	},
 	"devDependencies": {
 		"@cloudflare/vitest-pool-workers": "^0.16.18",
+		"@cloudflare/workers-types": "^4.20260620.1",
 		"@types/node": "^22.13.14",
 		"prettier": "^3.5.3",
 		"typescript": "^5.5.2",
