@@ -16,5 +16,10 @@
 		"prettier": "^3.9.5",
 		"typescript": "^5.9.3",
 		"wrangler": "^4.107.1"
+	},
+	"allowScripts": {
+		"esbuild": false,
+		"sharp": false,
+		"workerd": false
 	}
 }
