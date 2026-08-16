@@ -10,3 +10,15 @@ updates:
       - dependency-name: "*"
         update-types:
           - "version-update:semver-major"
+
+    groups:
+      cloudflare:
+        patterns:
+          - "@cloudflare/*"
+          - "wrangler"
+
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 15
