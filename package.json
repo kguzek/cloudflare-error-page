@@ -10,7 +10,7 @@
 		"types:check": "tsc --noEmit"
 	},
 	"devDependencies": {
-		"@cloudflare/vitest-pool-workers": "^0.18.0",
+		"@cloudflare/vitest-pool-workers": "^0.21.3",
 		"@types/node": "^22.20.1",
 		"prettier": "^3.9.6",
 		"typescript": "^5.9.3",
