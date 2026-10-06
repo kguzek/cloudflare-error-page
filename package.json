@@ -14,7 +14,7 @@
 		"@types/node": "^22.20.5",
 		"prettier": "^3.9.9",
 		"typescript": "^5.9.3",
-		"wrangler": "^4.146.0"
+		"wrangler": "^4.147.0"
 	},
 	"allowScripts": {
 		"esbuild": false,
